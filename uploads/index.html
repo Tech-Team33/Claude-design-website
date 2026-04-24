@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omney CPA — Public Accounting Firm · Atlanta &amp; Mumbai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* Service bar */
+.service-bar {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 10px 48px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+.service-bar a { color: var(--ink-2); transition: color 0.15s; }
+.service-bar a:hover { color: var(--accent); }
+.service-bar .pipe { color: var(--rule); }
+
+/* Hero */
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 88px 48px 72px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 64px;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+}
+.hero .eyebrow { display: block; margin-bottom: 28px; }
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(48px, 6.2vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+}
+.hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+.hero .dek {
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+.hero .cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.hero .cta-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-left: 8px;
+}
+.hero-art {
+  aspect-ratio: 4 / 5;
+  min-height: 520px;
+}
+
+/* Trust bar */
+.trust {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.trust .label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.trust-credentials {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink-2);
+}
+.trust-credentials span { border-right: 1px solid var(--rule); padding-right: 48px; }
+.trust-credentials span:last-child { border-right: none; }
+.trust-credentials b { font-weight: 500; color: var(--ink); }
+
+/* Stats */
+.stats {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 72px 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+.stat .num {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(48px, 5vw, 68px);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: block;
+}
+.stat .label {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.4;
+  max-width: 200px;
+}
+
+/* Services */
+.section-head {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 48px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section-head h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 44px;
+  letter-spacing: -0.025em;
+  max-width: 640px;
+  line-height: 1.08;
+}
+.section-head h2 em { font-style: italic; color: var(--accent); }
+.section-head h2 .num {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-3);
+  letter-spacing: 0.12em;
+  margin-right: 14px;
+  vertical-align: 6px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.section-head .view-all {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+.section-head .view-all:hover { color: var(--accent); border-color: var(--accent); }
+
+.services-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 2px solid var(--ink);
+}
+.svc {
+  padding: 32px 28px 36px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.svc:last-child { border-right: none; }
+.svc:hover { background: var(--paper-2); }
+.svc:hover h3 { color: var(--accent); }
+.svc .svc-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.svc h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.svc p {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.svc ul {
+  list-style: none;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.svc ul li { margin-bottom: 6px; padding-left: 14px; position: relative; }
+.svc ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+
+/* Clientele strip */
+.clientele {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 72px;
+}
+.clientele h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 38px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.clientele .intro {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 340px;
+}
+.industries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.industry {
+  padding: 24px 20px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.005em;
+}
+.industry .dot {
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.industry .meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-left: auto;
+}
+
+/* Approach */
+.approach {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 48px;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+  background: var(--paper-2);
+}
+.approach .mark-lg {
+  display: inline-block;
+  width: 24px; height: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-bottom: 28px;
+}
+.approach p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  max-width: 880px;
+  margin: 0 auto 32px;
+  color: var(--ink);
+}
+.approach cite {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-style: normal;
+}
+
+/* Offices */
+.offices {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.office {
+  padding: 40px 48px;
+  border-right: 1px solid var(--rule);
+}
+.office:last-child { border-right: none; }
+.office .tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.office .tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.office h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 38px;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+.office h3 em { font-style: italic; font-weight: 400; }
+.office p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  max-width: 400px;
+}
+.office .addr {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 20px 0 24px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.office .phone {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+/* CTA */
+.cta-band {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 80px 48px;
+}
+.cta-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.cta-band h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(36px, 4vw, 56px);
+  letter-spacing: -0.025em;
+  line-height: 1.06;
+  color: var(--paper);
+}
+.cta-band h2 em { font-style: italic; color: color-mix(in oklab, var(--accent), white 30%); }
+.cta-band p {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: color-mix(in oklab, var(--paper), black 20%);
+  margin-top: 20px;
+  max-width: 480px;
+  line-height: 1.55;
+}
+.cta-band .contact-box {
+  background: color-mix(in oklab, var(--paper), black 85%);
+  border: 1px solid color-mix(in oklab, var(--paper), black 75%);
+  padding: 28px;
+}
+.cta-band .contact-box .row {
+  padding: 12px 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--paper), black 75%);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+.cta-band .contact-box .row:last-child { border-bottom: none; }
+.cta-band .contact-box .row .lbl {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--paper), black 40%);
+}
+.cta-band .contact-box .row .val {
+  color: var(--paper);
+  text-align: right;
+}
+
+@media (max-width: 960px) {
+  .hero, .clientele, .cta-inner { grid-template-columns: 1fr; gap: 32px; }
+  .trust { grid-template-columns: 1fr; gap: 16px; }
+  .trust-credentials span { border-right: none; padding-right: 0; }
+  .services-grid { grid-template-columns: 1fr; }
+  .svc { border-right: none; min-height: auto; }
+  .stats { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .offices { grid-template-columns: 1fr; }
+  .office { border-right: none; border-bottom: 1px solid var(--rule); padding: 32px 24px; }
+  .industries { grid-template-columns: 1fr; }
+  .service-bar { flex-wrap: wrap; gap: 16px; padding: 10px 24px; }
+}
+</style>
+</head>
+<body data-screen-label="Homepage">
+
+<div class="service-bar">
+  <a href="services-accounting.html">Accounting</a>
+  <span class="pipe">·</span>
+  <a href="services-tax.html">Tax</a>
+  <span class="pipe">·</span>
+  <a href="services-attest.html">Attest</a>
+  <span class="pipe">·</span>
+  <a href="services-benefits.html">Benefits Compliance</a>
+  <span class="pipe">·</span>
+  <a href="services-vcfo.html">Virtual CFO</a>
+  <span class="pipe">·</span>
+  <a href="contact.html">Contact</a>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="brand"><span class="mark"></span>Omney CPA <small>Public Accounting · Est. 2013</small></a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services-accounting.html">Services</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-right">
+    <span style="font-family: var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase;">Atlanta · Mumbai</span>
+    <div class="theme-toggle" data-theme-toggle></div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="eyebrow"><span class="dot"></span>A licensed US CPA firm · Atlanta &amp; Mumbai</span>
+    <h1>Attest, tax &amp; accounting — <em>built for companies that take them seriously.</em></h1>
+    <p class="dek">Omney CPA is a licensed US public accounting firm, partnered with K. Bharat &amp; Co., Chartered Accountants in Mumbai. We serve businesses and high-net-worth individuals with a team of 30+ skilled professionals across two continents.</p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn">Schedule a consultation <span class="arrow">→</span></a>
+      <a href="services-accounting.html" class="btn ghost">Explore services</a>
+      <span class="cta-meta">Response within one business day</span>
+    </div>
+  </div>
+  <div class="hero-art ph">
+    <div class="ph-label">IMG · 4:5 · "Atlanta office — partners desk, engagement files open"</div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="label">Credentials —</div>
+  <div class="trust-credentials">
+    <span><b>Licensed US CPA</b> firm</span>
+    <span><b>CA firm</b> — K. Bharat &amp; Co., Mumbai</span>
+    <span><b>30+</b> skilled professionals</span>
+    <span><b>Two offices</b> — Atlanta &amp; Mumbai</span>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><span class="num">10+</span><span class="label">Years of leadership experience in financial services</span></div>
+  <div class="stat"><span class="num">30+</span><span class="label">Skilled professionals across Atlanta and Mumbai</span></div>
+  <div class="stat"><span class="num">2</span><span class="label">Countries, one coordinated engagement team</span></div>
+  <div class="stat"><span class="num">3</span><span class="label">Service lines: Attest, Tax, Accounting &amp; MIS</span></div>
+</section>
+
+<div class="section-head">
+  <h2><span class="num">01 —</span>Services, <em>end&#8209;to&#8209;end.</em></h2>
+  <a href="services-accounting.html" class="view-all">All services →</a>
+</div>
+
+<section class="services-grid">
+  <a href="services-attest.html" class="svc">
+    <span class="svc-num">§ 01 · Attest</span>
+    <h3>Audit, review &amp; compilation engagements.</h3>
+    <p>Independent assurance services for businesses, investment funds, and regulated entities. PPM audits and valuations supported through our India practice.</p>
+    <ul>
+      <li>Audit</li>
+      <li>Limited review</li>
+      <li>Compilation engagements</li>
+      <li>PPM Audit (India)</li>
+      <li>Valuations (India)</li>
+    </ul>
+  </a>
+  <a href="services-tax.html" class="svc">
+    <span class="svc-num">§ 02 · Tax</span>
+    <h3>Returns, planning &amp; international tax.</h3>
+    <p>Federal, state and local tax returns for corporations, LLCs, partnerships, and individuals — including complex expat returns and ASC 740 provisions.</p>
+    <ul>
+      <li>Corporations · LLCs · Partnerships</li>
+      <li>Consolidated returns</li>
+      <li>Complex expat returns</li>
+      <li>International taxation</li>
+      <li>ASC 740 tax accounting</li>
+    </ul>
+  </a>
+  <a href="services-accounting.html" class="svc">
+    <span class="svc-num">§ 03 · Accounting</span>
+    <h3>Bookkeeping, close &amp; financial statements.</h3>
+    <p>Full-charge bookkeeping and targeted assistance to existing finance teams. We finalize accounts, prepare financial statements, and deliver management-ready MIS.</p>
+    <ul>
+      <li>Full-charge bookkeeping</li>
+      <li>Close &amp; finalization</li>
+      <li>Financial statements</li>
+      <li>Business valuations</li>
+      <li>Management MIS reports</li>
+    </ul>
+  </a>
+  <a href="services-benefits.html" class="svc">
+    <span class="svc-num">§ 04 · Benefits</span>
+    <h3>Employee benefits compliance checkups.</h3>
+    <p>ERISA, ACA, 5500 filings, and ongoing benefits compliance reviews — coordinated with payroll, HR, and your tax provisioning.</p>
+    <ul>
+      <li>ERISA &amp; plan compliance</li>
+      <li>ACA reporting (1094/1095)</li>
+      <li>Form 5500 filings</li>
+      <li>Annual compliance checkup</li>
+    </ul>
+  </a>
+</section>
+
+<div class="section-head" style="padding-top: 32px;">
+  <h2><span class="num">02 —</span>Services to investment funds.</h2>
+  <a href="services-funds.html" class="view-all">Fund services →</a>
+</div>
+
+<section class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+  <div class="svc" style="cursor: default;">
+    <span class="svc-num">§ Funds · 01</span>
+    <h3>Schedule K-1 tax reporting for US investors.</h3>
+    <p>Preparation and review of K-1 packages for US investors in funds managed from India or the US.</p>
+  </div>
+  <div class="svc" style="cursor: default;">
+    <span class="svc-num">§ Funds · 02</span>
+    <h3>US regulatory compliance for fund raising.</h3>
+    <p>Assistance with US regulatory filings when raising from US investors — alongside Indian counsel.</p>
+  </div>
+  <div class="svc" style="cursor: default; border-right: none;">
+    <span class="svc-num">§ Funds · 03</span>
+    <h3>FATCA &amp; CRS reporting.</h3>
+    <p>Annual FATCA and CRS reporting obligations for funds with cross-border investor bases.</p>
+  </div>
+</section>
+
+<section class="clientele">
+  <div>
+    <h2>Clients we serve, <span style="font-style: italic; color: var(--accent);">across industries.</span></h2>
+    <p class="intro">Our engagement team works with businesses of all sizes — from family-owned convenience stores to venture-backed staffing firms and cross-border investment funds — and individual clients whose tax lives are anything but simple.</p>
+  </div>
+  <div class="industries">
+    <div class="industry"><span class="dot"></span>Investment funds<span class="meta">Fin Svcs</span></div>
+    <div class="industry"><span class="dot"></span>Hedge funds<span class="meta">Fin Svcs</span></div>
+    <div class="industry"><span class="dot"></span>IT services<span class="meta">Tech</span></div>
+    <div class="industry"><span class="dot"></span>Healthcare benefits mgmt<span class="meta">Health</span></div>
+    <div class="industry"><span class="dot"></span>Staffing firms<span class="meta">Svcs</span></div>
+    <div class="industry"><span class="dot"></span>Education<span class="meta">Edu</span></div>
+    <div class="industry"><span class="dot"></span>Exports<span class="meta">Trade</span></div>
+    <div class="industry"><span class="dot"></span>Gas stations<span class="meta">Retail</span></div>
+    <div class="industry"><span class="dot"></span>Restaurants &amp; C-stores<span class="meta">Retail</span></div>
+    <div class="industry"><span class="dot"></span>Business owners<span class="meta">Indiv</span></div>
+    <div class="industry"><span class="dot"></span>Expats<span class="meta">Indiv</span></div>
+    <div class="industry"><span class="dot"></span>Self-employed &amp; W-2<span class="meta">Indiv</span></div>
+  </div>
+</section>
+
+<section class="approach">
+  <span class="mark-lg"></span>
+  <p>"The tax code is written to be read once and argued about for a decade. Our job is the argument — and to make sure our clients are on the right side of it."</p>
+  <cite>— Omney CPA · Engagement philosophy</cite>
+</section>
+
+<section class="offices">
+  <div class="office">
+    <div class="tag">Atlanta, Georgia · USA</div>
+    <h3>United States practice — <em>Omney CPA</em></h3>
+    <p>A licensed US CPA firm providing attest, tax, and accounting services to US-based businesses and high-net-worth individuals.</p>
+    <div class="addr">8735 Dunwoody Place,<br>Atlanta, GA 30350, United States</div>
+    <div class="phone">+1 (470) 407&nbsp;·&nbsp;9621</div>
+  </div>
+  <div class="office">
+    <div class="tag">Mumbai · India</div>
+    <h3>India practice — <em>K. Bharat &amp; Co.</em></h3>
+    <p>A practicing Chartered Accountants firm based in Mumbai, delivering PPM audits, valuations, and accounting support to both Indian and US engagements.</p>
+    <div class="addr">Office No. 2, 2nd Floor, Shantinath Shopping Centre,<br>S V Road, Malad West, Mumbai – 400064, India</div>
+    <div class="phone">+91 9833&nbsp;·&nbsp;489&nbsp;·&nbsp;346</div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-inner">
+    <div>
+      <h2>Let's talk about your <em>engagement.</em></h2>
+      <p>Whether you're a fund manager coordinating K-1s, a founder prepping your first audit, or an expat with a complicated return — one conversation is usually enough to tell you whether we're the right firm for the work.</p>
+    </div>
+    <div class="contact-box">
+      <div class="row"><span class="lbl">SPOC</span><span class="val">Kevin Darji, CPA</span></div>
+      <div class="row"><span class="lbl">Phone · US</span><span class="val">+1 (470) 407·9621</span></div>
+      <div class="row"><span class="lbl">Phone · IN</span><span class="val">+91 9833·489·346</span></div>
+      <div class="row"><span class="lbl">Email</span><span class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95fef0e3fcfbd5faf8fbf0ece6f0e7e3fcf6f0e6bbf6faf8">[email&#160;protected]</a></span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom: 16px;"><span class="mark"></span>Omney CPA</div>
+      <p style="max-width: 300px; line-height: 1.5;">A licensed US CPA firm providing attest, tax, and accounting services to businesses and high-net-worth individuals. In association with K. Bharat &amp; Co., Mumbai.</p>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services-accounting.html">Accounting</a></li>
+        <li><a href="services-tax.html">Tax</a></li>
+        <li><a href="services-attest.html">Attest</a></li>
+        <li><a href="services-benefits.html">Benefits Compliance</a></li>
+        <li><a href="services-vcfo.html">Virtual CFO</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Firm</h5>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#team">Team</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Offices</h5>
+      <ul>
+        <li>Atlanta, GA — +1 470·407·9621</li>
+        <li>Mumbai, IN — +91 9833·489·346</li>
+        <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86ede3f0efe8c6e9ebe8e3fff5e3f4f0efe5e3f5a8e5e9eb">[email&#160;protected]</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Omney CPA · All rights reserved</span>
+    <span>This site is for informational purposes only</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="shared.js"></script>
+</body>
+</html>
