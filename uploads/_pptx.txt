@@ -1,0 +1,81 @@
+
+
+===== ppt/slides/slide1.xml =====
+Omney CPA
+Omney CPA
+Public Accounting Firm
+K. Bharat & Co.
+Chartered Accountants
+
+===== ppt/slides/slide2.xml =====
+This profile is only for informational purposes.
+Omney CPA
+About us
+Kevin is a seasoned professional having 10+ years of experience serving clients in the financial services industry.
+His expertise is in providing accounting, tax, and consulting services to dynamic companies and their owners across a variety of industries.
+Kevin is a licensed CPA, MBA (IIM Ahmedabad) and CA.
+Kevin has earlier worked with Goldman Sachs in Investment Banking and PwC in Mergers and Acquisitions.
+Kevin Darji, CPA – Managing Principal
+About the firm
+K. Bharat & Co., Chartered Accountants is a practicing CA firm based in Mumbai, India.
+Omney CPA is a licensed US CPA firm.
+Omney provides attest, tax and accounting services to businesses and high net worth individuals.
+Omney has offices in Atlanta, GA and Mumbai, India, and has a team strength of 30+ skilled professionals.
+
+===== ppt/slides/slide3.xml =====
+Omney CPA
+Tax and Accounting Services (1/2)
+This profile is only for informational purposes.
+Audit
+Limited review
+Compilation engagements
+Attest Services
+Services to funds
+PPM Audit (India)
+Valuations (India)
+Preparation of Schedule K-1 tax reporting for US investors
+Assistance in US regulatory compliances for fund raising from US investors
+FATCA / CRS Reporting
+Financial Services domain
+Tax returns for Corporations, LLCs, Partnerships, Individuals
+Federal, State and Local tax returns
+Consolidated returns
+Complex Tax Returns of Expats
+International taxation
+Accounting for taxes under US GAAP (ASC 740)
+Tax Services
+
+===== ppt/slides/slide4.xml =====
+Full charge bookkeeping services
+Assistance to existing accounting team in specific functions / tasks
+Finalization of accounts
+Preparation of financial statements
+Business valuations
+MIS reports based on requirements of Management, size & nature of business
+Prepare regular reports as per required frequency
+Example – Inventory movement, segmental P&L, working capital analysis
+Accounting Services
+Valuation and MIS Services
+Omney CPA
+Tax and Accounting Services (2/2)
+This profile is only for informational purposes.
+Businesses in industries of investment funds, hedge funds, IT services, healthcare benefits management, staffing firms, education, exports, gas stations, restaurants, C-stores, etc.
+Individuals who are business owners, expats, self-employed, W2 salaried, etc.
+Illustrative Clientele Profile
+
+===== ppt/slides/slide5.xml =====
+This profile is only for informational purposes.
+Omney CPA
+Team and Contact Details
+Team Leaders
+Contact Details
+Ami Chauhan
+Ami leads the audit and MIS vertical in the firm. She is a CA having over 7 years of experience of serving clients from small medium business to listed companies.
+Binal Darji
+Binal leads the tax team in the firm. She is a practicing CA having over 15 years of experience.
+SPOC: Kevin Darji
+Phone: +91 9833 489 346 | +1 (470) 407 9621
+Email: kevin@omneyservices.com
+Address:
+Office No. 2, 2nd Floor, Shantinath Shopping Centre, S V Road, Malad West, Mumbai – 400064, India.
+8735 Dunwoody Place, Atlanta, GA 30350, USA.

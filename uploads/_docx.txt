@@ -1,0 +1,53 @@
+Info for website
+
+Background
+
+Website is for a CPA firm. CPA is US equivalent of Indian Chartered Accountant.
+
+Nature of business – CPA firm, accounting services, virtual CFO services, tax services
+
+Reference:
+
+https://www.vbccpa.com/
+
+https://www.cbiz.com/
+
+https://mystartupcfo.com/#services
+
+https://www.theglobaltek.com/home/USATaxServices#
+
+https://www.talleymullinscpa.com/
+
+https://www.linkedin.com/company/proledge-bookkeeping-services/
+
+https://www.businessfinancialgroup.biz/services.php
+
+https://www.google.com/search?q=benefits+compliances+adp&newwindow=1&sca_esv=52088a07cb864606&sxsrf=ACQVn0_fyUezGklhTWbt6wLR0F4l_DoXCw%3A1708281389630&ei=LU7SZeDtJbyw0-kP_-ut2Ak&ved=0ahUKEwiguJ6LxLWEAxU82DQHHf91C5sQ4dUDCBA&uact=5&oq=benefits+compliances+adp&gs_lp=Egxnd3Mtd2l6LXNlcnAiGGJlbmVmaXRzIGNvbXBsaWFuY2VzIGFkcDIGEAAYFhgeMggQABgIGB4YDTIIEAAYCBgeGA0yCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGA0iUDVCkC1i7DHABeAGQAQCYAagBoAG4AqoBAzAuMrgBA8gBAPgBAcICChAAGEcY1gQYsAPCAgQQIxgnwgIIEAAYFhgeGA-IBgGQBgg&sclient=gws-wiz-serp
+
+https://www.hrserviceinc.com/employee-benefits-compliance-checkup/
+
+https://newcityinsurance.com/employee-benefits-compliance/
+
+https://www.aon.com/en/capabilities/health-and-benefits/employee-benefits-consulting-and-broking#:~:text=Employee%20Benefits%20Compliance,changes%20alter%20the%20benefit%20landscape.
+
+Home page
+
+About us
+
+Overview
+
+Team
+
+Below are services but we should show all of them somewhere in top bar where visitors can see directly all of them
+
+Accounting
+
+Tax
+
+Benefits Compliance
+
+Contact Us
+
+Content
+
+https://www.taxesforexpats.com/articles/recently-published.html
